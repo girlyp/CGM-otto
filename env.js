@@ -14,6 +14,7 @@ var env = {
   settings: require('./lib/settings')()
 };
 
+
 // Module to constrain all config and environment parsing to one spot.
 // See the
 function config ( ) {
@@ -25,6 +26,9 @@ function config ( ) {
   env.HOSTNAME = readENV('HOSTNAME', null);
   env.IMPORT_CONFIG = readENV('IMPORT_CONFIG', null);
   env.static_files = readENV('NIGHTSCOUT_STATIC_FILES', __dirname + '/static/');
+
+  env.settings.CUSTOMER_ALARMS = readENV('CUSTOM_ALARMS', null);
+
   env.debug = {
     minify: readENVTruthy('DEBUG_MINIFY', true)
   };
