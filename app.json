@@ -1,6 +1,6 @@
 {
   "name": "CGM Remote Monitor",
-  "repository": "https://github.com/nightscout/cgm-remote-monitor",
+  "repository": "https://github.com/girlyp/CGM-otto",
   "env": {
     "ALARM_HIGH": {
       "description": "Default setting for new browser views, for the High alarm (triggered when BG crosses BG_TARGET_TOP). ('on' or 'off')",
@@ -146,6 +146,11 @@
       "description": "Default setting for new browser views, for the time mode. ('12' or '24')",
       "value": "12",
       "required": false 
+    },
+    "CUSTOM_ALARMS": {
+      "description": "Settings for Otts plugin",
+      "value": "",
+      "required": false
     }
   },
   "addons": [
