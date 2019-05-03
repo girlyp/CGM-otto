@@ -32,6 +32,9 @@ function config ( ) {
   env.settings.CUSTOMER_ALARMS_CALL_TIMES = readENV('CUSTOMER_ALARMS_CALL_TIMES', null);
   env.settings.CUSTOMER_ALARMS_CALL_NUMBER = readENV('CUSTOMER_ALARMS_CALL_NUMBER', null);
 
+  env.settings.TWILIO_ACCOUNT_SID = readENV('TWILIO_ACCOUNT_SID', null);
+  env.settings.TWILIO_AUTH_TOKEN = readENV('TWILIO_AUTH_TOKEN', null);
+
   env.debug = {
     minify: readENVTruthy('DEBUG_MINIFY', true)
   };
