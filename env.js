@@ -27,7 +27,10 @@ function config ( ) {
   env.IMPORT_CONFIG = readENV('IMPORT_CONFIG', null);
   env.static_files = readENV('NIGHTSCOUT_STATIC_FILES', __dirname + '/static/');
 
+  /* ODH - Add env variables */
   env.settings.CUSTOMER_ALARMS = readENV('CUSTOM_ALARMS', null);
+  env.settings.CUSTOMER_ALARMS_CALL_TIMES = readENV('CUSTOMER_ALARMS_CALL_TIMES', null);
+  env.settings.CUSTOMER_ALARMS_CALL_NUMBER = readENV('CUSTOMER_ALARMS_CALL_NUMBER', null);
 
   env.debug = {
     minify: readENVTruthy('DEBUG_MINIFY', true)
